@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Spatial2.gd" type="Script" id=1]
+[ext_resource path="res://platform_objects/Block Large.tscn" type="PackedScene" id=2]
+[ext_resource path="res://platform_objects/Cliff Block.tscn" type="PackedScene" id=3]
+[ext_resource path="res://platform_objects/Hexagon Block.tscn" type="PackedScene" id=4]
+[ext_resource path="res://platform_objects/LowHex Block.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.0117647, 0.431373, 0.333333, 1 )
@@ -32,3 +36,29 @@ transform = Transform( 0.00484227, -0.268153, 0.963364, -0.0334719, 0.962792, 0.
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.830869, 0.556468, 0, -0.556468, 0.830869, 2, 6.04457, 6.00296 )
 shadow_enabled = true
+
+[node name="Block Large" parent="." instance=ExtResource( 2 )]
+
+[node name="Block Large2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="Block Large3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2 )
+
+[node name="Block Large4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+
+[node name="Cliff Block" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -1, 0, -2 )
+
+[node name="Cliff Block2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -1, 0, -3 )
+
+[node name="Hexagon Block" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2 )
+
+[node name="Hexagon Block2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -0.5 )
+
+[node name="LowHex Block" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 1 )
